@@ -1,0 +1,8 @@
+#ifndef GAMEBOY_CONSTANTS_H
+#define GAMEBOY_CONSTANTS_H
+
+#endif //GAMEBOY_CONSTANTS_H
+
+const int MEMORY_SIZE = 8192;
+const int PIXEL_WIDTH = 144;
+const int PIXEL_HEIGHT = 160;
