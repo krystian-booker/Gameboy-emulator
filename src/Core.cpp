@@ -5,8 +5,8 @@ Cartridge cartridge;
 MemoryManagementUnit memoryManagementUnit;
 
 Core::Core(){
-    cartridge.LoadBootRom("/Users/krystianbooker/Documents/GitHub/roms/_bootrom.gb");
-    cartridge.LoadRom("/Users/krystianbooker/Documents/GitHub/roms/_tetris.gb");
+    cartridge.LoadBootRom(PROJECT_SOURCE_DIR"/roms/bootrom.gb");
+    cartridge.LoadRom(PROJECT_SOURCE_DIR"/roms/tetris.gb");
 
 
     //Boot rom is $0000 (0) - $0100 (256)

@@ -189,3 +189,4 @@ fabric.properties
 .idea/codestream.xml
 
 .idea
+*.gb
