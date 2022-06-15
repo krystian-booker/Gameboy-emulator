@@ -21,6 +21,13 @@ Core::Core(){
     }
 
     uint8_t byte = memoryManagementUnit.wram[pc.Read()];
+    switch(byte){
+        default:
+            char buffer[100];
+            sprintf(buffer,"%x",byte);
+            std::cerr << "Unknown opcode: 0x" << buffer << std::endl;
+            exit(1);
+    }
     //TODO: TEMP
     std::cout << "Core initialized" << std::endl;
 }
