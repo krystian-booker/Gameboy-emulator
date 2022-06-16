@@ -20,16 +20,25 @@ Core::Core(){
         memoryManagementUnit.wram[i] = cartridge.cartridgeRom[i - 256];
     }
 
+    std::cout << "Core initialized" << std::endl;
+}
+
+void Core::EmulateCycle(){
     uint8_t byte = memoryManagementUnit.wram[pc.Read()];
+
     switch(byte){
+        case 0xC3: {
+            unsigned short pcVal = pc.Read();
+            pcVal++;
+            pc.Write(pcVal);
+            break;
+        }
         default:
             char buffer[100];
             sprintf(buffer,"%x",byte);
             std::cerr << "Unknown opcode: 0x" << buffer << std::endl;
             exit(1);
     }
-    //TODO: TEMP
-    std::cout << "Core initialized" << std::endl;
 }
 
 void Core::JPnn(){

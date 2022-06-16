@@ -11,6 +11,7 @@
 class Core {
 public:
     Core();
+    void EmulateCycle();
 private:
     Register<uint8_t> a = Register<uint8_t>(0);
     Register<uint8_t> f = Register<uint8_t>(0);

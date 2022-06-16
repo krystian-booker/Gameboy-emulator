@@ -3,7 +3,11 @@
 Core core;
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    bool gameActive = true;
+    while(gameActive){
+        core.EmulateCycle();
+    }
     return 0;
 
 }
